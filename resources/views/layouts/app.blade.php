@@ -49,7 +49,7 @@
             padding: 0.85rem 1.25rem; margin-bottom: 1.5rem;
         }
 
-        @yield('extra-styles')
+       
     </style>
 </head>
 <body>

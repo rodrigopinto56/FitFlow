@@ -44,6 +44,7 @@ class RoutineController extends Controller
 
     public function show(Routine $routine)
     {
+        dd($routine, Auth::user()->role, $routine->user_id, Auth::id());
         $this->authorizeRoutine($routine);
         $routine->load('exercises');
         return view('routines.show', compact('routine'));
@@ -77,10 +78,11 @@ class RoutineController extends Controller
         return redirect()->route('routines.index')->with('success', 'Rutina eliminada.');
     }
 
-    private function authorizeRoutine(Routine $routine)
-    {
-        if (Auth::user()->role !== 'admin' && $routine->user_id !== Auth::id()) {
-            abort(403, 'No tienes permiso para acceder a esta rutina.');
-        }
+    
+        private function authorizeRoutine(Routine $routine)
+{
+    if (Auth::user()->role !== 'admin' && $routine->user_id !== Auth::id()) {
+        abort(403);
     }
 }
+    }
