@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="public/images/logo.png" alt="Logo" width="150"/>
+</p>
 #  Sistema de Rutinas de Ejercicio
 
 Aplicación web desarrollada en Laravel para gestionar rutinas de entrenamiento personalizadas. Los usuarios pueden crear y administrar sus rutinas, mientras que los administradores gestionan el catálogo global de ejercicios.
